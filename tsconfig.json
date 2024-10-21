@@ -1,7 +1,25 @@
 {
-  "files": [],
-  "references": [
-    { "path": "./tsconfig.app.json" },
-    { "path": "./tsconfig.node.json" }
+  "compilerOptions": {
+    "target": "es6", // Specify ECMAScript target version
+    "module": "esnext", // Specify module code generation
+    "allowJs": true, // Allows .js and .jsx files in the project
+    "checkJs": false, // Disable type checking for .js/.jsx files
+    "jsx": "react", // Support JSX in React files
+    "moduleResolution": "node", // Enable Node.js style resolution
+    "resolveJsonModule": true, // Allow JSON imports
+    "esModuleInterop": true, // For interop with commonjs modules
+    "skipLibCheck": true, // Skip type checks on declaration files
+    "strict": true, // Enable strict type-checking options
+    "baseUrl": "./src", // Base URL for module resolution
+    "paths": {
+      "*": ["node_modules/*", "src/types/*"] // Aliases
+    }
+  },
+  "include": [
+    "src/**/*" // Include everything in the src folder
+  ],
+  "exclude": [
+    "node_modules", // Exclude node_modules from compilation
+    "dist" // Exclude build folder
   ]
 }
